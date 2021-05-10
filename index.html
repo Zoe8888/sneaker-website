@@ -1,0 +1,410 @@
+<!-- 
+    SNEAKER STORE PROJECT
+
+    You are tasked to replicate the following site: https://megaone.acrothemes.com/index-product-hotspot.html
+
+    Most of the HTML structure has been set up for you, however you will have to go through the document to
+    fill in the missing HTML elements and classes. I have also included the background, and 2 images for you.
+
+    If you would like to edit settings of either Owl Carousel or FullPage.js, you will need to edit the settings
+    in the scripts.js file.
+
+    Owl Carousel Options:
+    https://owlcarousel2.github.io/OwlCarousel2/docs/api-options.html
+
+    FullPage.js Options:
+    https://github.com/alvarotrigo/fullPage.js#options
+
+    I have also linked and initialized Animate On Scroll (AOS). You will need to go through the documentation
+    to apply the correct attributes to get the desired outcome.
+
+    AOS Documentation:
+    https://michalsnik.github.io/aos/
+
+    You will also have to link in your own FontAwesome kits. I have marked the area for this script with a comment
+
+    FontAwesome Icons:
+    https://fontawesome.com/icons?d=gallery&p=2&m=free
+
+    THE DEADLINE FOR THE PROJECT IS FRIDAY 7 MAY
+
+    Goodluck and have fun!
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sneaker Store</title>
+    <script
+      src="https://kit.fontawesome.com/e6eae71e18.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- 3rd Party CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.0/fullpage.min.css"
+      integrity="sha512-RVmrWua3k1yTDEOg4Yzs2bK5+Thh7nM6jrhDq/6/5/Mwa0JbYe4pP4YMK5sqghKz01T3DgrwYc57Jaf1PSurCg=="
+      crossorigin="anonymous"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+      integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css"
+      integrity="sha512-OTcub78R3msOCtY3Tc6FzeDJ8N9qvQn1Ph49ou13xgA9VsH9+LRxoFU6EqLhW4+PKRfU+/HReXmSZXHEkpYoOA=="
+      crossorigin="anonymous"
+    />
+
+    <!-- My CSS -->
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./form.css">
+    <link rel="stylesheet" href="./modal.css">
+  </head>
+  <body>
+    <div id="fullpage">
+      <div class="section">
+        <div class="icon">
+          <i class="fab fa-facebook-f"></i> / <i class="fab fa-twitter"></i> /
+          <i class="fab fa-linkedin-in"></i> /
+          <i class="fab fa-instagram"></i>
+        </div>
+        <!-- Add classes where necessary and style the section appropriately -->
+        <div
+          data-aos="fade-down"
+          data-aos-easing="linear"
+          data-aos-duration="1500"
+        >
+          <div id="homePage" class="content">
+            <div class="social"></div>
+            <div class="home-details">
+              <h1 class="home-heading">
+                Premium <span class="red-heading">Air Force 1 Sneakers</span>
+              </h1>
+              <p class="description">
+                Lorem ipsum is simply dummy text of the printing and
+                typesetting. Lorem Ipsum has been the industry’s standard dummy.
+              </p>
+              <a href="#products" class="button">View More</a>
+            </div>
+            <img
+              class="img_1"
+              src="images/red-air-force.jpg"
+              alt="Sneaker"
+              data-tilt
+            />
+          </div>
+        </div>
+      </div>
+      <div class="section">
+        <div class="icon">
+          <i class="fab fa-facebook-f"></i> / <i class="fab fa-twitter"></i> /
+          <i class="fab fa-linkedin-in"></i> /
+          <i class="fab fa-instagram"></i>
+        </div>
+        <!-- Add classes where necessary and style the section appropriately -->
+        <div id="productPage" class="content">
+          <header class="page-header-container">
+            <div class="product-header">
+              <div>
+                <h2 class="page-heading">Premium</h2>
+                <h2 class="page-subtitle">Air Force 1 Sneakers</h2>
+              </div>
+              <div class="counter">
+                <div>
+                  <h2 class="number-counter">555</h2>
+                  <p class="text-counter">Shoes Delivered</p>
+                </div>
+                <div>
+                  <h2 class="number-counter">707</h2>
+                  <p class="text-counter">New Artciles</p>
+                </div>
+                <div>
+                  <h2 class="number-counter">888</h2>
+                  <p class="text-counter">Happy Customers</p>
+                </div>
+              </div>
+              <div></div>
+              <!-- Add HTML for the numbers here. They DO NOT have to animate -->
+            </div>
+          </header>
+          <!-- Product slider, please add your own classes as well to the HTML -->
+          <div id="product-slider" class="owl-carousel">
+            <!-- Product Item -->
+            <div class="product">
+              <img src="images/pixel.jpg" alt="Sneaker" />
+              <h3>Nike Air Force 1 Pixel</h3>
+              <button class="product-button" onclick="openModal()">
+                View Detail
+              </button>
+            </div>
+            <!-- Product Item -->
+            <div class="product">
+              <img src="images/red-air-force.jpg" alt="Sneaker" />
+              <h3>Red Air Force 1</h3>
+              <button class="product-button" onclick="openModal()">
+                View Detail
+              </button>
+            </div>
+            <!-- Product Item -->
+            <div class="product">
+              <img
+                src="images/nike_Air_Force_1_07_White_White_Pine_Green.jpg"
+                alt="Sneaker"
+              />
+              <h3>Pine Green Air Force 1</h3>
+              <button class="product-button" onclick="openModal()">
+                View Detail
+              </button>
+            </div>
+            <!-- Product Item -->
+            <div class="product">
+              <img src="images/pistachio-frost" alt="Sneaker" />
+              <h3>Pistaccio Frost Air Force 1</h3>
+              <button class="product-button" onclick="openModal()">
+                View Detail
+              </button>
+            </div>
+            <!-- Product Item -->
+            <div class="product">
+              <img
+                src="images/nike-air-force-1-shadow-pastel-ci0919-106.jpg"
+                alt="Sneaker"
+              />
+              <h3>Pastel Air Force 1</h3>
+              <button class="product-button" onclick="openModal()">
+                View Detail
+              </button>
+            </div>
+          </div>
+          <div id="modal">
+            <div class="modal-images">
+              <img
+                class="large-modal-img"
+                src="/images/pixel.jpg"
+                alt="Sneaker"
+              />
+              <div class="small-modal-imgs">
+                <img
+                  class="small-modal-img"
+                  src="/images/nike_Air_Force_1_07_White_White_Pine_Green.jpg"
+                  alt="Sneaker"
+                />
+                <img
+                  class="small-modal-img"
+                  src="/images/images/Nike-Air-Force-1-Shadow-Pistachio-Frost-.jpg"
+                  alt="Sneaker"
+                />
+                <img
+                  class="small-modal-img"
+                  src="/images/nike-air-force-1-shadow-pastel-ci0919-106.jpg"
+                  alt="Sneaker"
+                />
+              </div>
+              <div class="modal-info">
+                <h4>Articles</h4>
+                <h3>Pixel Air Force 1</h3>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Perspiciatis sunt tempore voluptate cumque commodi et tenetur
+                  eveniet! Ea modi hic voluptates placeat. Minus, soluta
+                  suscipit sapiente asperiores minima quia accusamus.
+                </p>
+              </div>
+              <div class="modal-product sizes">
+                <div id="shoe-size" class="red">Size:</div>
+                <div class="size">36</div>
+                <div class="size">37</div>
+                <div class="size">38</div>
+                <div class="size">39</div>
+                <div class="size">40</div>
+                <div class="size">41</div>
+                <div class="size">42</div>
+              </div>
+              <div class="modal-product color">
+                <div class="red">Quantity</div>
+                <div class="quantity">
+                  <span></span>
+                  <span id="number">1</span>
+                  <span></span>
+                </div>
+                <div class="red">
+                  Color:
+                </div>
+                <div class="colors">
+                  <div class="color color-1"></div>
+                  <div class="color color-2"></div>
+                  <div class="color color-3"></div>
+                </div>
+              </div>
+              <div class="modal-product price">$499</div>
+              <a class="product-button" href="#">Purchase</a>
+            </div>
+            <!-- Button to close modal. Please style appropriately -->
+            <button onclick="openModal()">
+              <i class="fas fa-times fa-2x close"></i>
+            </button>
+            <div class="arrows">
+              <i class="fas fa-chevron-circle-left fa-3x"></i>
+              <i class="fas fa-chevron-circle-right fa-3x"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section">
+        <div id="testimonialPage" class="content">
+          <div class="icon">
+            <i class="fab fa-facebook-f"></i> / <i class="fab fa-twitter"></i> /
+            <i class="fab fa-linkedin-in"></i> /
+            <i class="fab fa-instagram"></i>
+          </div>
+          <!-- Page header -->
+          <header class="testimonial-header-container">
+            <h2 class="page-heading-1">Best In Business</h2>
+            <h3 class="page-subtitle">Happy Customers</h3>
+          </header>
+          <div id="testimonial-slider" class="owl-carousel">
+            <!-- The content for the testimonials has been created using JavaScript. 
+                 Please go to the inspect tool to see which classes were used to build the slider, 
+                 and use the classnames given to style them in your CSS sheet -->
+          </div>
+        </div>
+      </div>
+      
+      <!-- Form -->
+      <div class="section">
+        <div id="contactPage" class="form">
+          <div class="form-container-details">
+            <!-- Page header -->
+            <header class="page-header-container">
+              <h3 class="page-heading">
+                Questions?
+                <span class="span-page-header">Let's Get In Touch</span>
+              </h3>
+            </header>
+            <!-- Contact Details -->
+            <div class="contact-details-container">
+              <h4 class="contact-details-heading">Warehouse Location</h4>
+
+              <p class="contact-details-description">
+                There are many variations of passages of Lorem Ipsum available,
+                but the majority have suffered.
+              </p>
+              <!-- Please insert location, contact numbers and email elements here -->
+              <div id="Social">
+                <p class="icon1">
+                  <i id="icon1" class="fas fa-map-marker-alt"></i> 123 Park
+                  Avenue, New York, United States
+                </p>
+                <p class="icon2">
+                  <i id="icon2" class="fas fa-phone-volume"></i>
+                  <span class="no">+1 631 1234 5678</span>
+                  <span class="no">+1 631 1234 5678</span>
+                </p>
+                <p class="icon3">
+                  <i id="icon3" class="fas fa-paper-plane"></i>
+                  email@website.com
+                </p>
+              </div>
+            </div>
+            <div class="social-links">
+              <i id="icon_1" class="fab fa-facebook-f"></i>
+              <i id="icon_2" class="fab fa-twitter"></i>
+              <i id="icon_3" class="fab fa-linkedin-in"></i>
+              <i id="icon_4" class="fab fa-instagram"></i>
+            </div>
+          </div>
+
+          <!-- Create new form on FORMSPREE and insert ULR in the ACTION ATTRIBUTE -->
+
+          <form
+            action="https://formspree.io/f/moqyvrqz"
+            method="POST"
+            id="contact-form"
+          >
+            <input
+              class="contact-input"
+              type="text"
+              name="full_name"
+              id="full_name"
+              placeholder="Name"
+              required
+            />
+            <input
+              class="contact-input"
+              type="tel"
+              name="contact_no"
+              id="contact_no"
+              placeholder="Contact No"
+              required
+            />
+            <input
+              class="contact-input"
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Email"
+              required
+            />
+            <textarea
+              class="contact-input"
+              name="message"
+              id="message"
+              placeholder="Type your message here"
+            ></textarea>
+            <button class="button-form" type="submit">
+              Submit Information
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+    </div>
+
+    <!-- External Scripts -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
+      integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.0/fullpage.min.js"
+      integrity="sha512-HqbDsHIJoZ36Csd7NMupWFxC7e7aX2qm213sX+hirN+yEx/eUNlZrTWPs1dUQDEW4fMVkerv1PfMohR1WdFFJQ=="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.extensions.min.js"
+      integrity="sha512-0xW5KFMtT462F65vVvIejNawM1U2Fp/yhItmQVFUwdYP+R9tQFCn4QtLEhkp6RoGovZ6YCvbxy+GVCtGv0+nvA=="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+      integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
+
+    <!-- My Javascript File -->
+    <script src="./scripts.js"></script>
+    <script>
+      // $(document).ready(function () {
+      //   $(".owl-carousel").owlCarousel({
+      //     items: 2,
+      //     margin: 50,
+      //     loop: true,
+      //     stagePadding: 100,
+      //     dots: false,
+      //     autoplay: true,
+      //   });
+      // });
+    </script>
+  </body>
+</html>

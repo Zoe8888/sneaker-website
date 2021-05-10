@@ -1,0 +1,379 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+/* CSS RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Page Container Styles */
+.content {
+  width: 100%;
+  height: 100%;
+  margin-left: 60px;
+}
+
+/* Navigation Tooltip Styling */
+#fp-nav ul li .fp-tooltip {
+  color: white;
+  background-color: #222;
+  padding: 10px;
+}
+
+/* Navigation Styling */
+#fp-nav.fp-left {
+  background-color: #ed2d34;
+  left: 0;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  padding: 10px;
+  width: 60px;
+}
+
+/* Product Page Styling, needed for modal */
+#productPage {
+  position: relative;
+}
+
+/* Coloring the navbar icons white */
+#fp-nav ul li a span,
+#fp-nav ul li a.active span {
+  background-color: white;
+  color: black;
+}
+
+/* Hide title and buttons */
+#product-slider h3,
+#product-slider button {
+  display: none;
+}
+
+/* Product slider active item setting */
+#product-slider .active h3,
+#product-slider .active button {
+  display: block;
+}
+
+/* Modal Styling */
+#modal {
+  display: none;
+}
+
+#modal.modal-active {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background-color: white;
+  border: 1px solid black;
+  color: black;
+  z-index: 100;
+  width: 50vw;
+  height: 50vh;
+  transform: translate(-50%, -50%);
+}
+/* Used to prevent the carousel from stretching the screen */
+.owl-carousel {
+  overflow: hidden;
+}
+
+/* Used to scale down the home image. You can remove this. */
+img {
+  max-width: 40vw;
+}
+*/
+
+/* PLEASE START YOUR STYLES UNDERNEATH THIS */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1 {
+  color: rgb(87, 84, 84);
+  font-weight: bold;
+  padding-bottom: 10px;
+  font-size: 3.3rem;
+}
+
+.red-heading {
+  color: #ed2d34;
+  font-weight: bold;
+  padding-bottom: 10px;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-image: url(images/banner.jpg);
+  background-size: cover;
+}
+
+.description {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  flex-direction: column;
+  margin-left: 20px;
+  padding-bottom: 40px;
+  color: rgb(87, 84, 84);
+  size: 80px;
+  font-size: 30px;
+}
+
+.button {
+  border: solid;
+  border-radius: 40px;
+  padding: 10px;
+  font-size: 30px;
+  text-decoration: none;
+  margin-left: 20px;
+  background-color: white;
+  color: rgb(87, 84, 84);
+  transition: 0.3s ease-in;
+}
+
+.button:hover {
+  color: white;
+  background-color: #ed2d34;
+  border: solid;
+}
+
+#homePage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-heading {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.img-1 {
+  align-items: center;
+  object-fit: cover;
+  height: 600px;
+}
+
+.icon {
+  top: 20px;
+  right: 30px;
+  position: absolute;
+}
+
+.home-details {
+  width: 30%;
+}
+
+.page-header-container {
+  font-family: "Montserrat", sans-serif;
+  font-size: 32px;
+}
+
+.page-heading {
+  color: rgb(87, 84, 84);
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.page-subtitle {
+  color: #ed2d34;
+  left: 200px;
+  font-size: 50px;
+  font-weight: bold;
+  display: flex;
+  flex-direction: row;
+}
+
+.product-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 10px;
+}
+
+#productPage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+h4 {
+  color: rgb(87, 84, 84);
+}
+
+.counter {
+  color: rgb(87, 84, 84);
+  display: flex;
+  text-align: center;
+  flex-direction: row;
+  font-size: 15px;
+}
+
+.number-counter {
+  font-size: 50px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.text-counter {
+  font-size: 20px;
+  margin: 20px;
+}
+
+.product-img {
+  object-fit: cover;
+  object-position: center;
+}
+
+.product h3 {
+  font-size: 25px;
+  margin: 20px;
+  color: rgb(87, 84, 84);
+  font-family: "Montserrat", sans-serif;
+}
+
+#product-slider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+}
+
+.product-button {
+  border: solid;
+  border-radius: 40px;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  text-decoration: none;
+  margin-top: 20px;
+  background-color: white;
+  color: rgb(87, 84, 84);
+  transition: 0.3s ease-in;
+}
+
+.product-button:hover {
+  color: white;
+  background-color: #ed2d34;
+}
+
+#testimonialPage {
+  background-image: url(/images/banner.jpg);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+#testimonialPage h2 {
+  font-size: 2rem;
+}
+
+#testimonialPage h3 {
+  font-size: 3rem;
+}
+
+.testimonial-header-container {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 300px;
+  margin-bottom: 30px;
+  font-weight: bolder;
+  font-family: "Montserrat", sans-serif;
+}
+
+.testimonial {
+  font-family: sans-serif;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 150x;
+  max-width: 400px;
+  margin-right: 40px;
+  font-family: "Roboto", sans-serif;
+  color: rgb(87, 84, 84);
+}
+
+.page-heading-1 {
+  color: rgb(87, 84, 84);
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.testimonial-img {
+  border-radius: 50%;
+  max-width: 80px;
+  margin-top: 50px;
+}
+
+.fab {
+  color: #464646;
+  border-radius: 50px;
+  font-size: 16px;
+  padding: 15px 15px;
+}
+
+.fab:hover {
+  background: #ed2d34;
+  color: white;
+  border-radius: 50px;
+  animation-delay: 0.8s;
+  font-size: 16px;
+  padding: 15px 15px;
+}
+
+@media screen and (max-width: 1553) {
+  body {
+    text-align: center;
+    overflow-y: hidden;
+  }
+}
+
+.owl-stage {
+  transition: all 0.25s ease 0s;
+  width: 100%;
+  transform: translate3d();
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.owl-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  width: 90px;
+  max-width: 100%;
+  margin-right: 10px;
+  font-size: 20px;
+}
+
+.owl-carousel {
+  overflow: hidden;
+}
+
+#product-slider img {
+  max-height: 500px;
+  max-width: 400px;
+}
